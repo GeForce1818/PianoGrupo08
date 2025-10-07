@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PianoGrupo08</string>
+    <string name="notaDo">Do</string>
+    <string name="piano_normal">Piano Normal</string>
+    <string name="my_piano">PIANO TRADICIONAL</string>
+    <string name="fa">Fa</string>
+    <string name="la">La</string>
+    <string name="mi">Mi</string>
+    <string name="re">Re</string>
+    <string name="si">Si</string>
+    <string name="sol">Sol</string>
+</resources>

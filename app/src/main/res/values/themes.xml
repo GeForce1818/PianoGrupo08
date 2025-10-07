@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.PianoGrupo08" parent="Theme.Material3.DayNight">
+        <item name="actionBarStyle">@style/TransparentActionBar</item>
+        <item name="actionOverflowMenuStyle">@style/PopupMenuTextStyle</item>
+    </style>
+
+    <style name="Theme.PianoGrupo08" parent="Base.Theme.PianoGrupo08" />
+
+    <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="PopupMenuTextStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+</resources>
