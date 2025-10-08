@@ -9,4 +9,8 @@
     <string name="re">Re</string>
     <string name="si">Si</string>
     <string name="sol">Sol</string>
+    <string name="integrantes_del_grupo">Integrantes del Grupo</string>
+    <string name="elvis_alberto_chavez_garcia">Elvis Alberto Chavez Garcia</string>
+    <string name="jos_neftal_agreda_bola_os">José Neftalí Agreda Bolaños</string>
+    <string name="jorge_ren_castro_g_mez">Jorge René Castro Gómez</string>
 </resources>

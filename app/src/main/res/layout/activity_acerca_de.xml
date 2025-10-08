@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Integrantes del Grupo"
+            android:text="@string/integrantes_del_grupo"
             android:textSize="28sp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
@@ -52,9 +52,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="Elvis Alberto Chavez Garcia"
+                    android:text="@string/elvis_alberto_chavez_garcia"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="TextSizeCheck" />
             </LinearLayout>
 
             <!-- Integrante 2 (en su propio contenedor vertical) -->
@@ -78,9 +79,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="José Neftalí Agreda Bolaños"
+                    android:text="@string/jos_neftal_agreda_bola_os"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="TextSizeCheck" />
             </LinearLayout>
 
             <!-- Integrante 3 (Añade más aquí si es necesario) -->
@@ -103,9 +105,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="Jorge René Castro Gómez"
+                    android:text="@string/jorge_ren_castro_g_mez"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="TextSizeCheck" />
             </LinearLayout>
 
         </LinearLayout>
