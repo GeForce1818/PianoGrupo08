@@ -31,7 +31,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/inst_guitarra"
             android:scaleType="fitCenter"
-            android:contentDescription="Guitarra" />
+            android:contentDescription="@string/guitarra" />
 
         <!-- Violín -->
         <ImageButton
@@ -42,7 +42,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/inst_violin"
             android:scaleType="fitCenter"
-            android:contentDescription="Violín" />
+            android:contentDescription="@string/violin" />
 
         <!-- Flauta -->
         <ImageButton
@@ -53,7 +53,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/inst_flauta"
             android:scaleType="fitCenter"
-            android:contentDescription="Flauta" />
+            android:contentDescription="@string/flauta" />
 
         <!-- Trompeta -->
         <ImageButton
@@ -64,7 +64,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/inst_trompeta"
             android:scaleType="fitCenter"
-            android:contentDescription="Trompeta" />
+            android:contentDescription="@string/trompeta" />
 
         <!-- Batería -->
         <ImageButton
@@ -75,7 +75,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/inst_bateria"
             android:scaleType="fitCenter"
-            android:contentDescription="Batería" />
+            android:contentDescription="@string/bateria" />
 
         <!-- Piano -->
         <ImageButton
@@ -86,7 +86,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/inst_piano"
             android:scaleType="fitCenter"
-            android:contentDescription="Piano" />
+            android:contentDescription="@string/piano" />
 
         <!-- Saxofón -->
         <ImageButton
@@ -97,7 +97,7 @@
             android:background="@android:color/transparent"
             android:src="@drawable/inst_saxofon"
             android:scaleType="fitCenter"
-            android:contentDescription="Saxofón" />
+            android:contentDescription="@string/saxofon" />
 
     </LinearLayout>
 
@@ -107,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Piano de Instrumentos"
+        android:text="@string/piano_de_instrumentos"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"

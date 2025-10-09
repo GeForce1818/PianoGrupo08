@@ -32,4 +32,12 @@
     <string name="delfin_tecla">🐬</string>
     <string name="text_delfin">Delfín</string>
     <string name="mensaje_Instruccion_teclas">¡Toca las teclas para escuchar los animales!</string>
+    <string name="guitarra">Guitarra</string>
+    <string name="violin">Violín</string>
+    <string name="flauta">Flauta</string>
+    <string name="trompeta">Trompeta</string>
+    <string name="bateria">Batería</string>
+    <string name="piano">Piano</string>
+    <string name="saxofon">Saxofón</string>
+    <string name="piano_de_instrumentos">Piano de Instrumentos</string>
 </resources>
