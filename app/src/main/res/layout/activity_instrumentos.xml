@@ -5,114 +5,207 @@
     android:id="@+id/main_instrumentos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gris"
+    android:background="#1C1C1E"
     tools:context=".PianoInstrumentosActivity">
 
-    <!-- Contenedor horizontal de instrumentos -->
-    <LinearLayout
-        android:id="@+id/instrumentos_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.95"
-        app:layout_constraintHeight_percent="0.7">
-
-        <!-- Guitarra -->
-        <ImageButton
-            android:id="@+id/key_guitarra"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/inst_guitarra"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/guitarra" />
-
-        <!-- Violín -->
-        <ImageButton
-            android:id="@+id/key_violin"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/inst_violin"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/violin" />
-
-        <!-- Flauta -->
-        <ImageButton
-            android:id="@+id/key_flauta"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/inst_flauta"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/flauta" />
-
-        <!-- Trompeta -->
-        <ImageButton
-            android:id="@+id/key_trompeta"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/inst_trompeta"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/trompeta" />
-
-        <!-- Batería -->
-        <ImageButton
-            android:id="@+id/key_bateria"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/inst_bateria"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/bateria" />
-
-        <!-- Piano -->
-        <ImageButton
-            android:id="@+id/key_piano"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/inst_piano"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/piano" />
-
-        <!-- Saxofón -->
-        <ImageButton
-            android:id="@+id/key_saxofon"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:src="@drawable/inst_saxofon"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/saxofon" />
-
-    </LinearLayout>
-
-    <!-- Título -->
+    <!-- Título del Piano de Instrumentos -->
     <TextView
-        android:id="@+id/tv_instrumentos_title"
-        android:layout_width="wrap_content"
+        android:id="@+id/tituloPiano"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fondo_titulo"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="@string/piano_de_instrumentos"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Contenedor principal de instrumentos -->
+    <LinearLayout
+        android:id="@+id/instrumentos_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloPiano"
+        app:layout_constraintWidth_percent="0.95">
+
+        <!-- Guitarra -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/key_guitarra"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/color_guitarra"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inst_guitarra"
+                android:contentDescription="@string/guitarra" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Violín -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/key_violin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/color_violin"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inst_violin"
+                android:contentDescription="@string/violin" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Flauta -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/key_flauta"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/color_flauta"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inst_flauta"
+                android:contentDescription="@string/flauta" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Trompeta -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/key_trompeta"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/color_trompeta"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inst_trompeta"
+                android:contentDescription="@string/trompeta" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Batería -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/key_bateria"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/color_bateria"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inst_bateria"
+                android:contentDescription="@string/bateria" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Piano -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/key_piano"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/color_piano"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inst_piano"
+                android:contentDescription="@string/piano" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Saxofón (CORREGIDO) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/key_saxofon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/color_saxofon"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inst_saxofon"
+                android:contentDescription="@string/saxofon" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

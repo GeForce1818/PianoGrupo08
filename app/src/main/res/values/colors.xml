@@ -7,6 +7,14 @@
     <color name="gris_tecla_negra">#333333</color>
     <color name="gris_claro">#CCCCCC</color>
 
+    <color name="color_guitarra">#FF6B35</color>
+    <color name="color_violin">#4ECDC4</color>
+    <color name="color_flauta">#45B7D1</color>
+    <color name="color_trompeta">#FFA07A</color>
+    <color name="color_bateria">#BB6BD9</color>
+    <color name="color_piano">#95A5A6</color>
+    <color name="color_saxofon">#3498DB</color>
+
 
     <!-- Colores por defecto de Android -->
     <color name="purple_200">#FFBB86FC</color>
