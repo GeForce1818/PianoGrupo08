@@ -13,4 +13,23 @@
     <string name="elvis_alberto_chavez_garcia">Elvis Alberto Chavez Garcia</string>
     <string name="jos_neftal_agreda_bola_os">José Neftalí Agreda Bolaños</string>
     <string name="jorge_ren_castro_g_mez">Jorge René Castro Gómez</string>
+
+
+
+    <string name="piano_de_la_selva">🎵 Piano de la Selva 🎵</string>
+    <string name="leon_tecla">🦁</string>
+    <string name="text_leon">León</string>
+    <string name="mono_tecla">🐵</string>
+    <string name="text_mono">Mono</string>
+    <string name="elefante_tecla">🐘</string>
+    <string name="text_elefante">Elefante</string>
+    <string name="pajaro_tecla">🐦</string>
+    <string name="text_pajaro">Pájaro</string>
+    <string name="rana_tecla">🐸</string>
+    <string name="text_rana">Rana</string>
+    <string name="lobo_tecla">🐺</string>
+    <string name="text_lobo">Lobo</string>
+    <string name="delfin_tecla">🐬</string>
+    <string name="text_delfin">Delfín</string>
+    <string name="mensaje_Instruccion_teclas">¡Toca las teclas para escuchar los animales!</string>
 </resources>

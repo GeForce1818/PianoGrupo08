@@ -6,4 +6,29 @@
     <color name="gris">#5F5F5F</color>
     <color name="gris_tecla_negra">#333333</color>
     <color name="gris_claro">#CCCCCC</color>
+
+
+    <!-- Colores por defecto de Android -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <!-- Colores para el piano de animales -->
+    <color name="verde_selva">#FF4CAF50</color>          <!-- Verde selva -->
+
+    <!-- Colores de los animales -->
+    <color name="color_leon">#FFFFA726</color>           <!-- Naranja león -->
+    <color name="color_mono">#FF8D6E63</color>           <!-- Marrón mono -->
+    <color name="color_elefante">#FF9E9E9E</color>       <!-- Gris elefante -->
+    <color name="color_pajaro">#FF4FC3F7</color>         <!-- Azul pájaro -->
+    <color name="color_rana">#FF66BB6A</color>           <!-- Verde rana -->
+    <color name="color_lobo">#FF424242</color>           <!-- Gris oscuro lobo -->
+    <color name="color_delfin">#FF1976D2</color>         <!-- Azul delfín -->
+
+    <!-- Colores adicionales para fondos -->
+    <color name="transparent_negro">#80000000</color>    <!-- Negro transparente -->
+    <color name="fondo_titulo">#40000000</color>         <!-- Fondo semi-transparente -->
 </resources>

@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PianoGrupo08">
         <activity
+            android:name=".PianoAnimales"
             android:screenOrientation="landscape"
-            android:name=".AcercaDeActivity"
             android:exported="false" />
+        <activity
+            android:name=".AcercaDeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
