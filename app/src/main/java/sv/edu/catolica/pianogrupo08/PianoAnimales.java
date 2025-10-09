@@ -1,6 +1,5 @@
 package sv.edu.catolica.pianogrupo08;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
@@ -22,7 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.card.MaterialCardView;
 
-public class MainActivity extends AppCompatActivity {
+public class PianoAnimales extends AppCompatActivity {
 
     private SoundPool soundPool;
     private SparseIntArray soundMap;
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_piano_animales);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -58,63 +57,76 @@ public class MainActivity extends AppCompatActivity {
             if (status == 0) {
                 soundsLoaded = true;
             } else {
-                Toast.makeText(MainActivity.this, "Error al cargar un sonido", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PianoAnimales.this, "Error al cargar un sonido de animal", Toast.LENGTH_SHORT).show();
             }
         });
 
         soundMap = new SparseIntArray();
-        soundMap.put(R.raw.nota_do, soundPool.load(this, R.raw.nota_do, 1));
-        soundMap.put(R.raw.nota_re, soundPool.load(this, R.raw.nota_re, 1));
-        soundMap.put(R.raw.nota_mi, soundPool.load(this, R.raw.nota_mi, 1));
-        soundMap.put(R.raw.nota_fa, soundPool.load(this, R.raw.nota_fa, 1));
-        soundMap.put(R.raw.nota_sol, soundPool.load(this, R.raw.nota_sol, 1));
-        soundMap.put(R.raw.nota_la, soundPool.load(this, R.raw.nota_la, 1));
-        soundMap.put(R.raw.nota_si, soundPool.load(this, R.raw.nota_si, 1));
+        soundMap.put(R.raw.leon, soundPool.load(this, R.raw.leon, 1));
+        soundMap.put(R.raw.mono, soundPool.load(this, R.raw.mono , 1));
+        soundMap.put(R.raw.elefante, soundPool.load(this, R.raw.elefante, 1));
+        soundMap.put(R.raw.pajaro, soundPool.load(this, R.raw.pajaro, 1));
+        soundMap.put(R.raw.rana, soundPool.load(this, R.raw.rana, 1));
+        soundMap.put(R.raw.lobo, soundPool.load(this, R.raw.lobo, 1));
+        soundMap.put(R.raw.delfin, soundPool.load(this, R.raw.delfin, 1));
     }
 
-
     private void setupPianoKeys() {
-        MaterialCardView teclaDo = findViewById(R.id.tecla_Do);
-        teclaDo.setOnClickListener(v -> {
-            animateKeyPress(v);
-            playSound(R.raw.nota_do, "Do");
-        });
+        MaterialCardView teclaDo = findViewById(R.id.tecla_leon);
+        if (teclaDo != null) {
+            teclaDo.setOnClickListener(v -> {
+                animateKeyPress(v);
+                playSound(R.raw.leon, "León");
+            });
+        }
 
-        MaterialCardView teclaRe = findViewById(R.id.tecla_Re);
-        teclaRe.setOnClickListener(v -> {
-            animateKeyPress(v);
-            playSound(R.raw.nota_re, "Re");
-        });
+        MaterialCardView teclaRe = findViewById(R.id.tecla_mono);
+        if (teclaRe != null) {
+            teclaRe.setOnClickListener(v -> {
+                animateKeyPress(v);
+                playSound(R.raw.mono, "Mono");
+            });
+        }
 
-        MaterialCardView teclaMi = findViewById(R.id.tecla_Mi);
-        teclaMi.setOnClickListener(v -> {
-            animateKeyPress(v);
-            playSound(R.raw.nota_mi, "Mi");
-        });
+        MaterialCardView teclaMi = findViewById(R.id.tecla_elefante);
+        if (teclaMi != null) {
+            teclaMi.setOnClickListener(v -> {
+                animateKeyPress(v);
+                playSound(R.raw.elefante, "Elefante");
+            });
+        }
 
-        MaterialCardView teclaFa = findViewById(R.id.tecla_Fa);
-        teclaFa.setOnClickListener(v -> {
-            animateKeyPress(v);
-            playSound(R.raw.nota_fa, "Fa");
-        });
+        MaterialCardView teclaFa = findViewById(R.id.tecla_pajaro);
+        if (teclaFa != null) {
+            teclaFa.setOnClickListener(v -> {
+                animateKeyPress(v);
+                playSound(R.raw.pajaro, "Pájaro");
+            });
+        }
 
-        MaterialCardView teclaSol = findViewById(R.id.tecla_Sol);
-        teclaSol.setOnClickListener(v -> {
-            animateKeyPress(v);
-            playSound(R.raw.nota_sol, "Sol");
-        });
+        MaterialCardView teclaSol = findViewById(R.id.tecla_rana);
+        if (teclaSol != null) {
+            teclaSol.setOnClickListener(v -> {
+                animateKeyPress(v);
+                playSound(R.raw.rana, "Rana");
+            });
+        }
 
-        MaterialCardView teclaLa = findViewById(R.id.tecla_La);
-        teclaLa.setOnClickListener(v -> {
-            animateKeyPress(v);
-            playSound(R.raw.nota_la, "La");
-        });
+        MaterialCardView teclaLa = findViewById(R.id.tecla_Lobo);
+        if (teclaLa != null) {
+            teclaLa.setOnClickListener(v -> {
+                animateKeyPress(v);
+                playSound(R.raw.lobo, "Lobo");
+            });
+        }
 
-        MaterialCardView teclaSi = findViewById(R.id.tecla_Si);
-        teclaSi.setOnClickListener(v -> {
-            animateKeyPress(v);
-            playSound(R.raw.nota_si, "Si");
-        });
+        MaterialCardView teclaSi = findViewById(R.id.tecla_delfin);
+        if (teclaSi != null) {
+            teclaSi.setOnClickListener(v -> {
+                animateKeyPress(v);
+                playSound(R.raw.delfin, "Delfín");
+            });
+        }
     }
 
     private void animateKeyPress(View v) {
@@ -123,11 +135,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void playSound(int soundResource, String noteName) {
+    private void playSound(int soundResource, String animalName) {
         if (soundsLoaded) {
             int soundId = soundMap.get(soundResource);
             soundPool.play(soundId, 1.0f, 1.0f, 1, 0, 1.0f);
-            Toast.makeText(this, "Nota: " + noteName, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Animal: " + animalName, Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Sonidos aún no cargados", Toast.LENGTH_SHORT).show();
         }
@@ -176,23 +188,25 @@ public class MainActivity extends AppCompatActivity {
         builder.setItems(pianoTypes, (dialog, which) -> {
 
             if (which == 0) {
-                Toast.makeText(this, "Ya estás en el Piano Tradicional", Toast.LENGTH_SHORT).show();
-
-            } else if (which == 1) {
-                Toast.makeText(this, "Cambiando al Piano de Animales...", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, PianoAnimales.class);
+                Toast.makeText(this, "Cambiando al Piano Tradicional...", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(PianoAnimales.this, MainActivity.class);
                 startActivity(intent);
                 finish();
 
+            } else if (which == 1) {
+                Toast.makeText(this, "Ya estás en el Piano de Animales", Toast.LENGTH_SHORT).show();
+
             } else if (which == 2) {
+                // Opción 3: Cambiar a Piano de Instrumentos
                 Toast.makeText(this, "Cambiando al Piano de Instrumentos...", Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(MainActivity.this, PianoInstrumentos.class);
+                //Intent intent = new Intent(PianoAnimales.this, PianoInstrumentos.class);
                 //startActivity(intent);
                 finish();
             }
         });
         builder.show();
     }
+
 
     private void exitApp() {
         if (soundPool != null) {
