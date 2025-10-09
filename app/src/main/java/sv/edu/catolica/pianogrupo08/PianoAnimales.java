@@ -21,7 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.card.MaterialCardView;
 
-public class PianoAnimales extends AppCompatActivity {
+public class PianoAnimales extends MenuActivity {
 
     private SoundPool soundPool;
     private SparseIntArray soundMap;
@@ -189,7 +189,7 @@ public class PianoAnimales extends AppCompatActivity {
 
             if (which == 0) {
                 Toast.makeText(this, "Cambiando al Piano Tradicional...", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(PianoAnimales.this, MainActivity.class);
+                Intent intent = new Intent(PianoAnimales.this, PianoTradicionalActivity.class);
                 startActivity(intent);
                 finish();
 

@@ -1,6 +1,5 @@
 package sv.edu.catolica.pianogrupo08;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
@@ -22,7 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.card.MaterialCardView;
 
-public class MainActivity extends AppCompatActivity {
+public class PianoTradicionalActivity extends MenuActivity {
 
     private SoundPool soundPool;
     private SparseIntArray soundMap;
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             if (status == 0) {
                 soundsLoaded = true;
             } else {
-                Toast.makeText(MainActivity.this, "Error al cargar un sonido", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PianoTradicionalActivity.this, "Error al cargar un sonido", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -147,58 +146,5 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-
-        if (itemId == R.id.action_change_piano) {
-            showChangePianoDialog();
-            return true;
-        } else if (itemId == R.id.action_about) {
-            Intent intent = new Intent(this, AcercaDeActivity.class);
-            startActivity(intent);
-            return true;
-        } else if (itemId == R.id.action_exit) {
-            exitApp();
-            return true;
-        } else {
-            return super.onOptionsItemSelected(item);
-        }
-    }
-
-    private void showChangePianoDialog() {
-        final String[] pianoTypes = {"Piano Tradicional", "Piano Infantil de la Selva", "Piano de Instrumentos Musicales"};
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Selecciona un tipo de piano");
-        builder.setItems(pianoTypes, (dialog, which) -> {
-
-            if (which == 0) {
-                Toast.makeText(this, "Ya estás en el Piano Tradicional", Toast.LENGTH_SHORT).show();
-
-            } else if (which == 1) {
-                Toast.makeText(this, "Cambiando al Piano de Animales...", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, PianoAnimales.class);
-                startActivity(intent);
-                finish();
-
-            } else if (which == 2) {
-                Toast.makeText(this, "Cambiando al Piano de Instrumentos...", Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(MainActivity.this, PianoInstrumentos.class);
-                //startActivity(intent);
-                finish();
-            }
-        });
-        builder.show();
-    }
-
-    private void exitApp() {
-        if (soundPool != null) {
-            soundPool.release();
-            soundPool = null;
-        }
-        finishAffinity();
     }
 }
